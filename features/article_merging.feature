@@ -15,7 +15,7 @@ Feature: Article Merging
     Given I am logged into the admin panel
     Given I am on the edit article page with id "1"
     Then I should see "Merge Articles"
-    When i fill in "Article ID" with 50
+    When I fill in "Article ID" with 50
     And I click "Merge"
     Then I should be on some page
     And see both articles
