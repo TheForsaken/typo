@@ -3,14 +3,14 @@ Feature: Article Merging
   In order to avoid having many articles with same content
   I want to be able to merge articles to one
 
+  Background:
+    Given the blog is set up
+    And I am logged into the admin panel
+
   Scenario: A non-admin cannot merge two articles
     Given I am on the edit article page of "Foobar"
     And I am not an administrator
     Then I should not see "Merge Articles"
-
-  Background:
-    Given the blog is set up
-    And I am logged into the admin panel
 
   Scenario: When articles are merged, the merged article should contain the text of both previous articles
 
