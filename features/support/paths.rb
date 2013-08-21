@@ -16,9 +16,8 @@ module NavigationHelpers
       '/'
     when /^the new article page$/
       '/admin/content/new'
-    when /^the edit article page of "(.+)"$/
-      debugger
-      article_id = 1
+    when /^the edit article page with id "(.+)"$/
+      article_id = $1
       "/admin/content/edit/#{article_id}"
 
     # Add more mappings here.
